@@ -4,6 +4,7 @@ module.exports = {
         commonjs: true,
         es2021: true,
         node: true,
+        jest: true, // on indique qu'on utilise jest
     },
     extends: [
         "airbnb-base",
@@ -15,5 +16,4 @@ module.exports = {
         indent: ["error", 4],
         quotes: ["error", "double"],
     },
-    overrides: [],
 };
