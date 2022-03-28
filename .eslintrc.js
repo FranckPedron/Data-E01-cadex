@@ -1,5 +1,5 @@
 module.exports = {
-    env: {
+    env: { // concerne les variables d'environnement autorisées
         browser: true,
         commonjs: true,
         es2021: true,
@@ -10,10 +10,13 @@ module.exports = {
         "airbnb-base",
     ],
     parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: "latest",
     },
     rules: {
         indent: ["error", 4],
         quotes: ["error", "double"],
+        "no-use-before-define": ["error", { functions: false }], // permet d'avoir la définition de la fonction après son appel
+        "max-len": ["off", { ignoreComments: true }],
+        "no-restricted-syntax": 0,
     },
 };

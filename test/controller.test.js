@@ -3,10 +3,8 @@
 const controller = require("../app/controller");
 
 // describe permet d'effectuer un groupe de test
-describe("Test cadex",()=>{
-    beforeAll(()=>{
+describe("Test cadex", () => {
+    beforeAll(() => {
         controller.cadex();
     });
-
-    
 });
