@@ -19,7 +19,8 @@
   "homepage": "https://github.com/O-clock-Atome/Data-E01-cadex#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "pg": "^8.7.3"
   },
   "devDependencies": {
     "eslint": "^8.11.0",
