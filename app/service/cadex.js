@@ -3,7 +3,7 @@ const data = require("../../data/parts.json");
 
 const cadexService = {
     /**
-     *
+     * Génère un cadex aléatoire
      * @returns {name,verb,adjective,complement}
      */
     generate() {

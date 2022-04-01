@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/O-clock-Atome/Data-E01-cadex#readme",
   "dependencies": {
+    "apidoc": "^0.51.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "pg": "^8.7.3"
+    "joi": "^17.6.0",
+    "pg": "^8.7.3",
+    "swagger-client": "^3.18.4"
   },
   "devDependencies": {
     "eslint": "^8.11.0",

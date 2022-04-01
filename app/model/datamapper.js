@@ -1,6 +1,23 @@
 const client = require("./dataclient");
 
 const dataMapper = {
+
+    // je déclare ici pour ma documentation (JSDoc), le type cadex
+    /**
+     * Type du cadavre exquis
+     * @typedef {Object} Cadex - nom du type
+     * @property {string} name - propriété du type
+     * @property {string} verb
+     * @property {string} adjective
+     * @property {string} complement
+     */
+
+    // je commence à partir d'ici la documentation de mes méthodes
+
+    /**
+     * Génère un cadex aléatoire
+     * @return {Cadex} un cadavre exquis
+     */
     async generate() {
         return {
             name: await this.getRandom("name"),
@@ -14,6 +31,10 @@ const dataMapper = {
         };
     },
 
+    /**
+     * Retourne un cadex aléatoire déjà généré
+     * @returns {string} un cadavre exquis
+     */
     async getSentence() {
         try {
             const query = "SELECT sentence FROM sentence order by random() limit 1;";
@@ -24,6 +45,10 @@ const dataMapper = {
         }
     },
 
+    /**
+     * Ajoute un Cadex à la BDD
+     * @param {Cadex} values - Cadex envoyé par formulaire
+     */
     async add(values) {
         try {
             const keys = Object.keys(values);

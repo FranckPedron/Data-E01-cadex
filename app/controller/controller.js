@@ -3,6 +3,9 @@
 const dataMapper = require("../model/datamapper");
 
 const controller = {
+    /**
+     * retourne un Cadex
+     */
     async getCadex(req, res) {
         let cadex;
         if (req.query) {
@@ -30,12 +33,14 @@ const controller = {
         // j'envoie la phrase
         res.json(cadex);
     },
+    /**
+     * permet d'ajouter un Cadex en BDD
+     */
     async postCadex(req, res) {
         // console.log(req.body);
         // on va récupérer les valeurs à insérer
         const values = req.body;
 
-        // on insère les valeurs
         await dataMapper.add(values);
 
         // je renvoie une phrase avec les valeurs ajoutées
